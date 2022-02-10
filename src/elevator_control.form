@@ -61,6 +61,8 @@
         </constraints>
         <properties>
           <enabled value="false"/>
+          <foreground color="-4473925"/>
+          <selected value="true"/>
           <text value="Elevator 1 here"/>
         </properties>
       </component>
