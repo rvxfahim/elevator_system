@@ -20,6 +20,8 @@ public class elevator_control extends JFrame {
     private JButton elev_1_goto_1;
     private JButton elev_2_goto_1;
     private JTextField central_controller_terminal;
+    private JButton emergencyButton;
+    private JButton emergencyButton1;
     Central_Controller c = new Central_Controller();
     Local_Controller local_controller_1 = new Local_Controller(1);
     Local_Controller local_controller_2 = new Local_Controller(2);
@@ -77,6 +79,19 @@ public class elevator_control extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 internal_button_processor(3, 1);
+            }
+        });
+        emergencyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            //pop up message dialog box: "Emergency, Fire Department Notified"
+                JOptionPane.showMessageDialog(null, "Emergency, Fire Department Notified");
+            }
+        });
+        emergencyButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Emergency, Fire Department Notified");
             }
         });
     }
@@ -176,7 +191,9 @@ public class elevator_control extends JFrame {
 
         public void internal_button_pressed(int floor_number) {
             //go to floor number
+            elevator_control.this.central_controller_terminal.setText("Elevator " + elevator_id + " is handling internal request for floor " + floor_number);
             go_to_floor(floor_number);
+
         }
 
         //deactivate inside buttons method
