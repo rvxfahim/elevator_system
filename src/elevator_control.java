@@ -409,6 +409,8 @@ public class elevator_control extends JFrame {
                         }
                         activate_inside_buttons();
                         status = true; //elevator is free
+                        System.out.println("Elevator " + elevator_id + " is free now");
+                        elevator_control.this.central_controller_terminal.setText("Elevator " + elevator_id + " is free now");
                     }
                 }).start();
             } else if (current_floor > destination) {
@@ -448,6 +450,8 @@ public class elevator_control extends JFrame {
                         }
                         activate_inside_buttons();
                         status = true; //elevator is free
+                        System.out.println("Elevator " + elevator_id + " is free now");
+                        elevator_control.this.central_controller_terminal.setText("Elevator " + elevator_id + " is free now");
                     }
                 }).start();
             } else {
@@ -476,6 +480,8 @@ public class elevator_control extends JFrame {
                         }
                         activate_inside_buttons();
                         status = true; //elevator is free
+                        System.out.println("Elevator " + elevator_id + " is free now");
+                        elevator_control.this.central_controller_terminal.setText("Elevator " + elevator_id + " is free now");
                     }
                 }).start();
             }
